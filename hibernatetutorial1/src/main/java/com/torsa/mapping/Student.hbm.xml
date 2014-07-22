@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+ 
+<hibernate-mapping>
+    <class name="com.torsa.entity.Student" table="student" >
+        <id name="studentId" type="int">
+            <column name="Student_Id" />
+            <generator class="native" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="First_Name" length="10" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="Last_Name" length="20" not-null="true"  />
+        </property>
+    </class>
+</hibernate-mapping>
